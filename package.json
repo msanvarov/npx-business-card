@@ -1,0 +1,47 @@
+{
+  "name": "sal-anvarov",
+  "private": false,
+  "version": "0.0.1",
+  "description": "A cross-platform author card for Sal Anvarov.",
+  "author": "Sal Anvarov <msalanvarov@outlook.com>",
+  "keywords": [
+    "typescript",
+    "cli"
+  ],
+  "license": "MIT",
+  "main": "./dist/index.js",
+  "bin": "./dist/cli.js",
+  "files": [
+    "dist/**/*",
+    "!dist/**/*.test.js"
+  ],
+  "scripts": {
+    "start": "node ./dist/cli.js",
+    "dev": "ts-node ./src/cli.ts",
+    "clean": "rimraf ./dist/ ./exec/",
+    "build": "npm run clean && tsc",
+    "test": "npm run build && ava --verbose",
+    "bundle": "npm run build && pkg . --out-dir ./exec/",
+    "deploy": "npm version major & npm publish"
+  },
+  "devDependencies": {
+    "@types/clear": "^0.1.2",
+    "@types/inquirer": "^8.2.6",
+    "@types/request": "^2.48.8",
+    "ava": "^2.2.0",
+    "pkg": "^4.4.0",
+    "rimraf": "^2.6.3",
+    "ts-node": "^8.3.0",
+    "typescript": "^3.5.3"
+  },
+  "dependencies": {
+    "boxen": "^4.2.0",
+    "chalk": "^4.1.0",
+    "clear": "^0.1.0",
+    "cli-spinners": "^2.5.0",
+    "commander": "^2.20.0",
+    "inquirer": "^8.2.6",
+    "open": "^7.0.4",
+    "request": "^2.88.2"
+  }
+}
