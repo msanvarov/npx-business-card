@@ -19,7 +19,7 @@ Table of Contents:
 Preview this by typing in the following command in your terminal:
 
 ```bash
-npx sal-anvarov
+npx sanvarov
 ```
 
 This is a npx business card that I created to connect with other developers programmatically.
